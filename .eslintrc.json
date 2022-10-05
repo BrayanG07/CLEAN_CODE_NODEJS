@@ -1,0 +1,13 @@
+{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+      "project": "./tsconfig.json"
+  },
+  "rules": {
+      "@typescript-eslint/no-floating-promises": "off"
+  },
+  "ignorePatterns":[
+      "dist", // IGNORAR LA CARPETA DIST
+      "src/**/*.js" // IGNORAR LOS ARCHIVOS JS 
+  ]
+}

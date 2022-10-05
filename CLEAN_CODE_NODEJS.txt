@@ -1,0 +1,34 @@
+npm init --yes
+npm i express aws-sdk dotenv uuid
+npm i -D typescript ts-node nodemon eslint eslint-config-standard-with-typescript @types/express @types/node @types/uuid
+tsc --init		CONFIGURACIONES DE TYPESCRIPT
+tsc
+
+Documentacion: eslint-config-standard
+	https://standardjs.com/readme-esla.html
+	
+	
+1. Capa Domain = Esta no debe conocer absolutamente nada de la capa de infraestructura, la cominicacion es atraves de interfaces
+
+2. UseCases = Los casos de uso solo debe tener un metodo
+
+3. Paquete Services:
+	Tambian conocido como "SERVICIOS DE DOMINIO" sirven para tener logica repetitiva, por ejemplo  validar que el username de un usuario ya este en la BD esa logica se utiliza al guardar y actualizar, por eso la separamos en un paquete diferente, SE APLICAN EN LOS CASOS DE USO.
+	
+	Se instancian en el constructor de los UseCases, es mala practica pasarlos como inyeccion de dependencias.
+	
+	Si un servicio de dominio se esta instanciando multiples veces en varios constructores de los UseCase se recomienda como buena practica aplicar el "Patron Singleton"
+	
+Paquete driving-adapters: Son los puntos de entrada a nuestro dominio, ejemplo: una aplicacion de consola, una API REST, un listener de una cola SQS, utilizan los casos de uso
+
+
+-------------------------------------------------
+ARCHIVO SLINT Y SUS REGLAS
+-------------------------------------------------
+Para solucionar un error debido a una regla con eslint, basta con posicionarse encima del error y entre parentesis se encontrara la regla, agregarla en la propiedad de rules y aplicarle el off, tal y como el ejemplo de la regla #1
+
+1. "@typescript-eslint/no-floating-promises": "off"
+	Lo que permite es que ya no sea obligatorio agregar el .then(() => {}).catch(() => {}) en las promesas
+
+
+Pasar las implementaciones de las interfaces, nos referimos a la inyeccion de dependencias e inversion de dependencias.
