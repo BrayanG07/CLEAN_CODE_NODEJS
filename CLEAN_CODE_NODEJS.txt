@@ -32,3 +32,14 @@ Para solucionar un error debido a una regla con eslint, basta con posicionarse e
 
 
 Pasar las implementaciones de las interfaces, nos referimos a la inyeccion de dependencias e inversion de dependencias.
+
+
+
+-------------------------
+OBSERVACION IMPORTANTE
+-------------------------
+
+* Antes de actualizar un usuario, validar que ese usuario exista y despues eliminarlo
+* Si se desea eliminar el usuario, validar que el usuario exista y despues eliminarlo
+
+

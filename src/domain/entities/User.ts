@@ -1,6 +1,6 @@
 export interface User {
   id: string
-  name: string
-  username: string
-  age: number
+  name?: string // ? CON ESO LE DECIMOS QUE ESA PROPIEDAD NO SEA OBLIGATORIA
+  username?: string
+  age?: number
 }

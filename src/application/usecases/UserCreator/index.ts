@@ -13,7 +13,7 @@ export class UserCreatorUseCase {
   }
 
   async run (body: User): Promise<User> {
-    const existUser: boolean = await this._existUserByUserName.run(body.username)
+    const existUser: boolean = await this._existUserByUserName.run(body.username!) // `!` = significa que esto no sera undefined nunca
 
     if (existUser) throw new UserAlreadyExistsException()
 

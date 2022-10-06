@@ -4,7 +4,8 @@
       "project": "./tsconfig.json"
   },
   "rules": {
-      "@typescript-eslint/no-floating-promises": "off"
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-non-null-assertion": "off"
   },
   "ignorePatterns":[
       "dist", // IGNORAR LA CARPETA DIST
