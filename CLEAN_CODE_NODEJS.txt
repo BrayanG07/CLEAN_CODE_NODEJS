@@ -42,4 +42,8 @@ OBSERVACION IMPORTANTE
 * Antes de actualizar un usuario, validar que ese usuario exista y despues eliminarlo
 * Si se desea eliminar el usuario, validar que el usuario exista y despues eliminarlo
 
+// CLAVES DE ACCESO DYNAMO DB AWS
+AKIASIFZA6NVLFEVW5R7
+X8tTf3+WVSKCy4Htse7oo+Zp6NEjlDJi5R2Oi8xQ
+
 
