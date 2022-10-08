@@ -20,10 +20,10 @@ import { UserDeleterUseCase } from '../../../application/usecases/UserDeleter'
   // CREANDO USUARIOS
   const userCreatorUseCase = new UserCreatorUseCase(dynamoDBUserRepository)
   const userToCreate: User = {
-    name: 'Luciana',
-    age: 12,
-    username: 'luciana24',
-    id: '1'
+    name: 'Alejandro',
+    age: 18,
+    username: 'alejo25',
+    id: '2'
   }
   await userCreatorUseCase.run(userToCreate)
 
@@ -35,8 +35,8 @@ import { UserDeleterUseCase } from '../../../application/usecases/UserDeleter'
   // ACTUALIZAR USUARIOS
   const usertUpdaterUseCase = new UserUpdateUseCase(dynamoDBUserRepository)
   await usertUpdaterUseCase.run({
-    id: '1',
-    username: 'Alejandra'
+    id: '2',
+    username: 'Alejo25Update'
   })
 
   const usersReturned2 = await userGetterUseCase.run()
@@ -44,7 +44,7 @@ import { UserDeleterUseCase } from '../../../application/usecases/UserDeleter'
 
   // ELIMINAR UN USUARIO
   const userDeleterUseCase = new UserDeleterUseCase(dynamoDBUserRepository)
-  await userDeleterUseCase.run('1')
+  await userDeleterUseCase.run('2')
 
   const usersReturned3 = await userGetterUseCase.run()
   console.log(usersReturned3)

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-console-app": "nodemon ./src/infrastructure/driving-adapters/console/console.ts"
+    "start-console-app": "nodemon ./src/infrastructure/driving-adapters/console/console.ts",
+    "start-rest-app": "nodemon ./src/infrastructure/driving-adapters/api-rest/start.ts"
   },
   "keywords": [],
   "author": "",

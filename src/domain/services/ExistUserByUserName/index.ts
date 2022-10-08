@@ -1,4 +1,4 @@
-import { UserRepository } from 'domain/repositories/UserRepository'
+import { UserRepository } from '../../repositories/UserRepository'
 
 export class ExistUserByUserName {
   private readonly _userRepository: UserRepository
