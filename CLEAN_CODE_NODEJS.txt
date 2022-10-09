@@ -47,3 +47,60 @@ AKIASIFZA6NVLFEVW5R7
 X8tTf3+WVSKCy4Htse7oo+Zp6NEjlDJi5R2Oi8xQ
 
 
+----------------------------
+	GRAPHQL
+----------------------------
+
+ApolloServer: Es un cliente de GRAPHQL, es una interfaz grafica en el navegador para probar el servidor pero solo para ambiente de desarrollo y tambien sirve para crear el servidor 
+
+=========================
+	Instalacion
+=========================
+> npm i apollo-server-express graphql
+> npm i @graphql-tools/schema
+
+=========================
+
+** Observaciones
+
+> ID = es una palabra reservada de graphql, basicamente son los tipos de datos 
+> '!' = con este signo le decimos que es obligatorio 
+> type = basicamente son las entidades o tablas por decirlo de una forma
+> Inputs = indicamos la informacion que debemos recibir en nuestro 'resolver' para poder crear/actualizar un usuario(type
+> Query = Son como los Get
+
+> Mutation = definimos las acciones que realizaremos: guardar, actualizar etc..
+
+	Ejemplo Mutation:
+	
+	type Mutation {
+	  # createUser sera un resolver y desde el frontend nos pasaran un usuario de tipo UserCreateInput de forma obligatoria y te devolvere un usuario de forma obligatoria
+	  createUser {user: UserCreateInput!} : User! 
+	}
+	
+> resolvers = son los que resuelven o ejecutan las mutaciones y mantienen la logica
+
+=========================================
+	Alias Paths de TypeScript
+=========================================
+
+1. Establecer los paths en el archivo tsconfig.json
+
+"paths": {
+  "@infraestructure/*": ["infrastructure/*"],
+  "@application/*": ["application/*"],
+  "@domain/*": ["domain/*"]
+}
+	Con '/*' le indicamos que busque apartir de la carpeta y todo lo que ella contenga
+
+2. En el archivo package.json establecer lo siguiente despues de las dependencias:
+
+"_moduleAliases": {
+	"@infraestructure": "src/infrastructure",
+	"@application": "src/application",
+	"@domain": "src/fomain"
+} 
+
+3. Instalar la libreria ModuleAliases para que toda nuestra configuracion funcione correctamente:
+	
+	> npm i module-alias

@@ -1,0 +1,20 @@
+type User {
+  id: ID! # ID = es una palabra reservada de graphql, basicamente son los tipos de datos 
+  name: String! # '!' = con este signo le decimos que es obligatorio 
+  username: String!
+  age: Int!
+}
+
+# Inputs = indicamos la informacion que debemos rescibir en nuestro resolver para poder crear un usuario
+input UserCreateInput {
+  name: String!
+  username: String!
+  age: Int!
+}
+
+input UserUpdateInput {
+  id: ID!
+  name: String
+  username: String
+  age: Int
+}

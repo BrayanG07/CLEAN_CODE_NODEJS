@@ -1,0 +1,10 @@
+# Query = Son como los Get
+type Query {
+  user: [User]
+}
+
+# Mutation = definimos las acciones que realizaremos: guardar, actualizar etc..
+type Mutation {
+  # createUser sera un resolver y desde el frontend nos pasaran un usuario de tipo UserCreateInput de forma obligatoria y te devolvere un usuario de forma obligatoria
+  createUser {user: UserCreateInput!} : User! 
+}
