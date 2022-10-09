@@ -3,12 +3,12 @@ import { readdirSync, readFileSync } from 'fs'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import resolvers from './resolvers'
 
-const gqlFiles = readdirSync(join(__dirname, './typedefs')) // Leyendo el directorio
+const gqlFiles = readdirSync(join(__dirname, './typesdefs')) // Leyendo el directorio
 
 let typeDefs = ''
 
 gqlFiles.forEach((file) => { // Recorremos cada archivo y los colocamos en la variable para pasarlo al schema
-  typeDefs += readFileSync(join(__dirname, './typedefs', file), {
+  typeDefs += readFileSync(join(__dirname, './typesdefs', file), {
     encoding: 'utf8'
   })
 })

@@ -8,7 +8,7 @@ import { TuttoDataFakerGraphQL } from './graphql/TuttoDataFakerGraphQL'
 
 try {
   dotenv.config({
-    path: path.resolve(__dirname, '../../../../.env')
+    path: path.resolve(__dirname, '../../../.env')
   })
 
   new TuttoDataFakerBackendApp().start()
